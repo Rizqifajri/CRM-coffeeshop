@@ -9,7 +9,7 @@ export default function LoginPage() {
         <CardHeader>
           <CardTitle>Login Mimi CRM</CardTitle>
           <CardDescription>
-            Masuk untuk kelola customers & generate promo global berbasis data.
+            Masuk untuk kelola customers & generate promo global.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -23,7 +23,8 @@ export default function LoginPage() {
             <LoginForm />
           </Suspense>
           <p className="mt-4 text-xs text-muted-foreground">
-            Demo default: cek <code className="font-mono">env.example</code> untuk ADMIN_EMAIL/ADMIN_PASSWORD.
+            email: mimi@kopikita.com <br />
+            password: belikopidulu
           </p>
         </CardContent>
       </Card>
