@@ -1,0 +1,16 @@
+FROM node:20-bullseye-slim
+
+WORKDIR /app
+
+# Prisma (and some deps) may need openssl at runtime
+RUN apt-get update && apt-get install -y openssl ca-certificates && rm -rf /var/lib/apt/lists/*
+
+ENV NODE_ENV=development
+ENV NEXT_TELEMETRY_DISABLED=1
+
+EXPOSE 3000
+
+# In dev we bind-mount the source, so we don't copy files here.
+CMD ["bash", "-lc", "npm install && npx prisma generate && npx prisma db push && node prisma/seed.cjs && npm run dev -- --hostname 0.0.0.0 --port 3000"]
+
+
