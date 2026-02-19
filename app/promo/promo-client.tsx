@@ -126,10 +126,6 @@ export function PromoClient() {
           </div>
         ) : null}
       </div>
-
-      <p className="text-xs text-muted-foreground">
-        AI menggunakan prompt di folder <code className="font-mono">ai/</code>. Jika API key AI belum diset, sistem akan pakai fallback heuristic berbasis counts.
-      </p>
     </div>
   );
 }

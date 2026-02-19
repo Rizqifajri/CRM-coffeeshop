@@ -115,11 +115,6 @@ export function ChatClient() {
           Send
         </Button>
       </div>
-
-      <p className="text-xs text-muted-foreground">
-        Jika AI key belum diset, endpoint chat akan error. Set <code className="font-mono">OPENROUTER_API_KEY</code> atau{" "}
-        <code className="font-mono">GROQ_API_KEY</code>.
-      </p>
     </div>
   );
 }
